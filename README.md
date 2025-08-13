@@ -9,16 +9,45 @@ A command-line utility to automatically organize files on your desktop and in yo
 - Robust logging to both the console and a file.
 - Configurable via command-line arguments.
 
-## Installation
+## ⚙️ Installation
 
-1. Clone the repository to your local machine:
+1. **Clone the Repository**
+
+   Clone the repository to your local machine and navigate into the directory:
 
    ```bash
    git clone [https://github.com/your-username/messy-desk.git](https://github.com/your-username/messy-desk.git)
    cd messy-desk
    ```
 
-2. This project currently uses only the Python standard library. If external dependencies are added in the future, they will be listed in a `requirements.txt` file.
+2. **Create and Activate a Virtual Environment**
+
+   Using a virtual environment is a crucial best practice for isolating project dependencies.
+
+   - **Create the environment:**
+
+     ```bash
+     python3 -m venv venv
+     ```
+
+   - **Activate the environment:**
+     _**On macOS & Linux:**
+     `bash
+  source venv/bin/activate
+  `
+     _ **On Windows:**
+     `cmd
+  venv\Scripts\activate
+  `
+     You'll know the environment is active when your terminal prompt is prefixed with `(venv)`.
+
+3. **Install Dependencies**
+
+   This project currently uses only the Python standard library. If external dependencies were added in the future, you would install them using `pip` like this:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Configuration
 

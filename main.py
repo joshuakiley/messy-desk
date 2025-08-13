@@ -55,7 +55,14 @@ DEFAULT_LOG_FILE = os.path.join(
 
 
 def setup_logging(log_file_path: str) -> None:
-    """Configures a named logger for the application."""
+    """Configures a named logger for the application.
+
+    Creates the log directory if it does not exist and sets up a logger
+    with both file and stream handlers.
+
+    Args:
+        log_file_path (str): The full path to the log file.
+    """
     log_directory = os.path.dirname(log_file_path)
     os.makedirs(log_directory, exist_ok=True)
 
@@ -85,16 +92,12 @@ def main() -> int:
     argument parsing for configuration, initializes the logging system, and
     executes the core preflight checks of the application.
 
-    Args:
-        None
-
     Returns:
         int: An exit code, 0 for success and 1 for failure.
 
     Raises:
         EnvironmentError: If a critical preflight check fails.
     """
-
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Messy Desk Application")
     parser.add_argument(
