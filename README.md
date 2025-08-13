@@ -9,7 +9,7 @@ A command-line utility to automatically organize files on your desktop and in yo
 - Robust logging to both the console and a file.
 - Configurable via command-line arguments.
 
-## ⚙️ Installation
+## Installation
 
 1. **Clone the Repository**
 
